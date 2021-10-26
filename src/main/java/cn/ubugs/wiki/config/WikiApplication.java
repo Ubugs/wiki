@@ -1,5 +1,6 @@
 package cn.ubugs.wiki.config;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -10,6 +11,8 @@ import org.springframework.core.env.Environment;
 // 设置程序载入扫描的包路径
 // 扫描多个包 例: {"cn.ubugs.a","cn.ubugs.b"}
 @ComponentScan("cn.ubugs")
+// 设置扫描Mapper持久层路径
+@MapperScan("cn.ubugs.wiki.mapper")
 @SpringBootApplication
 public class WikiApplication {
     private static final Logger LOG = LoggerFactory.getLogger(WikiApplication.class);
