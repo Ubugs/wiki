@@ -1,11 +1,15 @@
-package cn.ubugs.wiki;
+package cn.ubugs.wiki.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 
+// 设置程序载入扫描的包路径
+// 扫描多个包 例: {"cn.ubugs.a","cn.ubugs.b"}
+@ComponentScan("cn.ubugs")
 @SpringBootApplication
 public class WikiApplication {
     private static final Logger LOG = LoggerFactory.getLogger(WikiApplication.class);
